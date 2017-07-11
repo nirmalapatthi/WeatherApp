@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Weather Application</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+       Country:  <input type="text" id="txtCountry" name="txtCountry" />&nbsp;&nbsp;
+       City:  <select id="lstCity"></select>       
+    </div>
+    <div class="col-md-12">
+        <br />
+        <input type="button" id="btnGetWeather" value="Get Weather" />
+    </div>
+    <div class="col-md-12">
+        <table>
+
+                <tr><td>Location:</td><td></td></tr>
+                <tr><td></td><td>Longitude: <label id="lblLong"></label>&nbsp;&nbsp;Lattitude: <label id="lblLat"></label> </td></tr>
+
+            <tr>
+                <td>Time:</td>
+                <td><label id="lblTime"></label></td>
+            </tr>
+            <tr>
+                <td>Wind:</td>
+                <td><label id="lblWind"></label></td>
+            </tr>
+            <tr>
+                <td>Visibility:</td>
+                <td><label id="lblVisibility"></label></td>
+            </tr>
+            <tr>
+                <td>Sky Conditions:</td>
+                <td><label id="lblSky"></label></td>
+            </tr>
+            <tr>
+                <td>Current Temperature:</td><td><label id="lbltemp"></label></td>                
+            </tr>
+            <tr>
+                <td></td><td>Min Temp: <label id="tempMin"></label>&nbsp;&nbsp;Max Temp: <label id="tempMax"></label></td>
+            </tr>
+            <tr>
+                <td>Relative Humidity:</td>
+                <td><label id="lblHumidity"></label></td>
+            </tr>
+            <tr>
+                <td>Pressure:</td>
+                <td><label id="lblPressure"></label></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

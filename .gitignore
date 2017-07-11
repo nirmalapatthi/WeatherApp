@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GlobalWeatherServiceProxy/bin/Debug
+/GlobalWeatherServiceProxy/obj/Debug
+/packages
+/WeatherApp.Data/bin/Debug
+/WeatherApp.Data/obj/Debug
+/WeatherApp.Models/bin/Debug
+/WeatherApp.Models/obj/Debug
+/WeatherApplication/bin
+/WeatherApplication.Tests/obj/Debug
+/WeatherService/.vs
+/WeatherService/bin
+/WeatherService/obj/Debug
+/WeatherService/packages
+/WeatherService.Tests/bin/Debug
+/WeatherService.Tests/obj/Debug
+/.vs
