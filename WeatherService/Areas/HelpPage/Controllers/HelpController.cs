@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using WeatherApp.Areas.HelpPage.ModelDescriptions;
-using WeatherApp.Areas.HelpPage.Models;
+using WeatherService.Areas.HelpPage.ModelDescriptions;
+using WeatherService.Areas.HelpPage.Models;
 
-namespace WeatherApp.Areas.HelpPage.Controllers
+namespace WeatherService.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

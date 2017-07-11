@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalWeatherServiceProxy",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Data", "WeatherApp.Data\WeatherApp.Data.csproj", "{082ACFC8-694E-452B-9AE6-F9B95A7E9EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApplication", "WeatherApplication\WeatherApplication.csproj", "{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\WeatherService.csproj", "{AE8B49D9-F56A-4847-BB59-1AB2480A23B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\WeatherService.csproj", "{CF46E5CA-4490-44DA-BABD-7B94F56F9E91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApplication", "WeatherApplication\WeatherApplication.csproj", "{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService.Tests", "WeatherService.Tests\WeatherService.Tests.csproj", "{916D6C3A-0CDA-4238-AA59-4784228D6885}"
 EndProject
@@ -33,14 +33,14 @@ Global
 		{082ACFC8-694E-452B-9AE6-F9B95A7E9EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{082ACFC8-694E-452B-9AE6-F9B95A7E9EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{082ACFC8-694E-452B-9AE6-F9B95A7E9EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8B49D9-F56A-4847-BB59-1AB2480A23B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8B49D9-F56A-4847-BB59-1AB2480A23B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8B49D9-F56A-4847-BB59-1AB2480A23B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8B49D9-F56A-4847-BB59-1AB2480A23B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5495D7BF-E730-4F8A-AEA6-E3665B0B0A7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF46E5CA-4490-44DA-BABD-7B94F56F9E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF46E5CA-4490-44DA-BABD-7B94F56F9E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF46E5CA-4490-44DA-BABD-7B94F56F9E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF46E5CA-4490-44DA-BABD-7B94F56F9E91}.Release|Any CPU.Build.0 = Release|Any CPU
 		{916D6C3A-0CDA-4238-AA59-4784228D6885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{916D6C3A-0CDA-4238-AA59-4784228D6885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916D6C3A-0CDA-4238-AA59-4784228D6885}.Release|Any CPU.ActiveCfg = Release|Any CPU

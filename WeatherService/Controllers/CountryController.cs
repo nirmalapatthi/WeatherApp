@@ -23,8 +23,8 @@ namespace WeatherApp.Controllers
         [HttpGet]
         public IHttpActionResult GetCitiesByCountry(string countryName)
         {
-            IEnumerable<City> cityList = _weather.GetCitiesByCountry(new Country { Name = countryName });
-            return Ok(cityList.AsEnumerable());
+            var cityList = _weather.GetCitiesByCountry(new Country { Name = countryName });
+            return Ok(cityList);
         }
         
     }

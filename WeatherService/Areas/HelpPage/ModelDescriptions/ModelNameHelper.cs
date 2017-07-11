@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace WeatherApp.Areas.HelpPage.ModelDescriptions
+namespace WeatherService.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

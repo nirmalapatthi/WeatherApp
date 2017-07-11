@@ -1,6 +1,6 @@
 using System;
 
-namespace WeatherApp.Areas.HelpPage.ModelDescriptions
+namespace WeatherService.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Use this attribute to change the name of the <see cref="ModelDescription"/> generated for a type.

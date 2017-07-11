@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace WeatherApp.Areas.HelpPage.ModelDescriptions
+namespace WeatherService.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

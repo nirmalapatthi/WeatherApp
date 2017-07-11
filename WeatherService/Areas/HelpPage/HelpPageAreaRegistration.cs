@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace WeatherApp.Areas.HelpPage
+namespace WeatherService.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

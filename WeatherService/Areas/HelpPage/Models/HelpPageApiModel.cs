@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using WeatherApp.Areas.HelpPage.ModelDescriptions;
+using WeatherService.Areas.HelpPage.ModelDescriptions;
 
-namespace WeatherApp.Areas.HelpPage.Models
+namespace WeatherService.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.
