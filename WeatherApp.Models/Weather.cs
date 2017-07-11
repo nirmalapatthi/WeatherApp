@@ -21,7 +21,7 @@ namespace WeatherApp.Models
         [JsonProperty("main")]
         public MainInfo Main { get; set; }
 
-        public int visibility { get; set; }
+        public double visibility { get; set; }
 
         [JsonProperty("wind")]
         public Wind Wind { get; set; }
@@ -30,7 +30,7 @@ namespace WeatherApp.Models
         public Clouds Clouds { get; set; }
 
         [JsonProperty("dt")]
-        public int DewPoint { get; set; }
+        public int Time { get; set; }
 
         [JsonProperty("sys")]
         public System sys { get; set; }
@@ -39,6 +39,6 @@ namespace WeatherApp.Models
 
         public string name { get; set; }
 
-        public int cod { get; set; }
+        public double cod { get; set; }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Models
 {
+    /// <summary>
+    /// Weather Brief Information. It is part of the weather JSON data structure returned by the service
+    /// </summary>
     public class BriefInfo
     {
         public int id { get; set; }

@@ -1,4 +1,7 @@
 ﻿$(document).ready(function () {
+
+    var serviceURL = 'http://localhost:61394';
+
     $("#txtCountry").keypress(function (e) {
         if (e.which == 13) {
             var countryName = $('#txtCountry').val();
@@ -9,7 +12,7 @@
             }
 
             $.ajax({
-                url: 'http://localhost:61394/api/Country/CitiesByCountry/' + countryName,
+                url: serviceURL + '/api/Country/CitiesByCountry/' + countryName,
                 type: 'GET',
                 dataType: 'json',
                 data: countryName,
@@ -34,8 +37,11 @@
         var countryName = $('#txtCountry').val();
         var cityName = $('#lstCity').val();
 
+        // Some cities contain / (slash) so taking first part of it
+        if (cityName.length > 0 && cityName.indexOf('/') != -1) cityName = cityName.split('/')[0]
+
         $.ajax({
-            url: 'http://localhost:61394/api/Weather/' + countryName + '/' + cityName,
+            url: serviceURL + '/api/Weather/' + countryName + '/' + cityName,
             type: 'GET',
             dataType: 'json',            
             success: function (data, textStatus, xhr) {

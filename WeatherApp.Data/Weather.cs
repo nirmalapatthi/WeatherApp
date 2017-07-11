@@ -34,16 +34,22 @@ namespace WeatherApp.Data
         {
             string xmlWeather = _globalWeather.GetWeather(country.Name, country.City.Name);
             // If weather data is not returned by global weather fall back on api.openweathermap.org
-            // Note: During testing noticed global weather is returning 'Data not found' for any selected city
+
             if (xmlWeather == "Data Not Found")
                 return GetOpenWeatherData(country.City.Name);
+            // else
+            // Note: During testing noticed global weather is returning 'Data not found' for any selected city
+
             return null;
         }
 
 
         private Models.Weather GetOpenWeatherData(string cityName)
         {
+            // Get API key from configuration
             var appid = ConfigurationManager.AppSettings["APPID"].ToString();
+
+            // Get the openweathermap URL from Configuration
             var url = ConfigurationManager.AppSettings["OpenWeatherMapURL"].ToString();
             //var appid = "b3a2b3c5a6dabcf17117e877f1a1ebbb";
             var client = new HttpClient();

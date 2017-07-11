@@ -13,17 +13,11 @@ namespace WeatherApp.Controllers
     [RoutePrefix("api/Country")]
     public class CountryController : ApiController
     {
-        private Data.Weather _weather;
-
-        public CountryController()
-        {
-            _weather = new Data.Weather();
-        }
-
         [HttpGet]
         public IHttpActionResult GetCitiesByCountry(string countryName)
         {
-            var cityList = _weather.GetCitiesByCountry(new Country { Name = countryName });
+            var weather = new Data.Weather();
+            var cityList = weather.GetCitiesByCountry(new Country { Name = countryName });
             return Ok(cityList);
         }
         
