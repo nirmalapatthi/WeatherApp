@@ -7,6 +7,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Linq;
+using System.Configuration;
+
 namespace WeatherApp.Data
 {
     public class Weather
@@ -30,9 +32,10 @@ namespace WeatherApp.Data
 
         public Models.Weather GetWeatherData(Country country)
         {
-            string xml = _globalWeather.GetWeather(country.Name, country.City.Name);
+            string xmlWeather = _globalWeather.GetWeather(country.Name, country.City.Name);
             // If weather data is not returned by global weather fall back on api.openweathermap.org
-            if (xml == "Data Not Found")
+            // Note: During testing noticed global weather is returning 'Data not found' for any selected city
+            if (xmlWeather == "Data Not Found")
                 return GetOpenWeatherData(country.City.Name);
             return null;
         }
@@ -40,12 +43,14 @@ namespace WeatherApp.Data
 
         private Models.Weather GetOpenWeatherData(string cityName)
         {
-            var appid = "b3a2b3c5a6dabcf17117e877f1a1ebbb";
+            var appid = ConfigurationManager.AppSettings["APPID"].ToString();
+            var url = ConfigurationManager.AppSettings["OpenWeatherMapURL"].ToString();
+            //var appid = "b3a2b3c5a6dabcf17117e877f1a1ebbb";
             var client = new HttpClient();
-            client.BaseAddress = new Uri("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=" + appid);
+            client.BaseAddress = new Uri(url + cityName + "&APPID=" + appid);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = client.GetAsync(new Uri("http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=" + appid)).Result;
+            var response = client.GetAsync(new Uri(url + cityName + "&APPID=" + appid)).Result;
 
             if (response.IsSuccessStatusCode)
             {

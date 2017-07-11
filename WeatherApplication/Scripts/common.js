@@ -3,6 +3,11 @@
         if (e.which == 13) {
             var countryName = $('#txtCountry').val();
 
+            if (countryName.trim().length == 0) {
+                alert("Please enter Country name and press enter key to get city list");
+                return;
+            }
+
             $.ajax({
                 url: 'http://localhost:61394/api/Country/CitiesByCountry/' + countryName,
                 type: 'GET',
@@ -18,7 +23,8 @@
                     });
                 },
                 error: function (xhr, textStatus, errorThrown) {
-                    alert(JSON.stringify(textStatus, null, 4));
+                    alert("Error Occurred!")
+                    console.log(JSON.stringify(textStatus, null, 4));
                 }
             });
         }
@@ -71,7 +77,8 @@
                 lblPressure.append(data.main.pressure);
             },
             error: function (xhr, textStatus, errorThrown) {
-                alert(JSON.stringify(textStatus, null, 4));
+                alert("Error Occurred!")
+                console.log(JSON.stringify(textStatus, null, 4));
             }
         });
     });

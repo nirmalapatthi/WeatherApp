@@ -14,7 +14,7 @@ namespace WeatherApp.Tests.Controllers
         [TestMethod]
         public void TestGetCitiesByCountry()
         {
-            CountryController controller = new CountryController();
+            var controller = new CountryController();
 
             IHttpActionResult result = controller.GetCitiesByCountry("Australia");
             
@@ -30,7 +30,7 @@ namespace WeatherApp.Tests.Controllers
         [TestMethod]
         public void TestGetCitiesByCountry_Negative()
         {
-            CountryController controller = new CountryController();
+            var controller = new CountryController();
 
             IHttpActionResult result = controller.GetCitiesByCountry("xyz");
 

@@ -2,25 +2,22 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Weather Application</h1>
-</div>
+<h4 style="text-align:center">Weather Application</h4>
+
 
 <div class="row">
-    <div class="col-md-12">
-       Country:  <input type="text" id="txtCountry" name="txtCountry" />&nbsp;&nbsp;
-       City:  <select id="lstCity"></select>       
+    <div class="col-md-12 divSize" data-title="Please enter country and press enter to get city list">
+       Country:  <input type="text" id="txtCountry" name="txtCountry" title="Please enter country and press enter to get city list" />&nbsp;&nbsp;
+       City:  <select id="lstCity" title="Please enter country and press enter to get city list"></select>       
     </div>
-    <div class="col-md-12">
-        <br />
-        <input type="button" id="btnGetWeather" value="Get Weather" />
+    <div class="col-md-12 divSize" >
+        
+        <input style="resize:none" type="button" id="btnGetWeather" title="Please click on Get Weather button to see the Weather information for given Country and City" value="Get Weather" />
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 divSize">
         <table>
 
-                <tr><td>Location:</td><td></td></tr>
-                <tr><td></td><td>Longitude: <label id="lblLong"></label>&nbsp;&nbsp;Lattitude: <label id="lblLat"></label> </td></tr>
-
+                <tr><td>Location:</td><td>Longitude: <label id="lblLong"></label>&nbsp;&nbsp;Lattitude: <label id="lblLat"></label> </td></tr>
             <tr>
                 <td>Time:</td>
                 <td><label id="lblTime"></label></td>
@@ -38,10 +35,7 @@
                 <td><label id="lblSky"></label></td>
             </tr>
             <tr>
-                <td>Current Temperature:</td><td><label id="lbltemp"></label></td>                
-            </tr>
-            <tr>
-                <td></td><td>Min Temp: <label id="tempMin"></label>&nbsp;&nbsp;Max Temp: <label id="tempMax"></label></td>
+                <td>Current Temperature:</td><td><label id="lbltemp"></label>&nbsp;&nbsp;Min Temp: <label id="tempMin"></label>&nbsp;&nbsp;Max Temp: <label id="tempMax"></label></td>                
             </tr>
             <tr>
                 <td>Relative Humidity:</td>
