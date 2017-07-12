@@ -38,7 +38,7 @@
         var countryName = $('#txtCountry').val();
         var cityName = $('#lstCity').val();
 
-        // Some cities contain / (slash) so taking first part of it
+        // Some city names contain / (slash) so taking first part of it
         if (cityName.length > 0 && cityName.indexOf('/') != -1) cityName = cityName.split('/')[0]
 
         $.ajax({
