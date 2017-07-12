@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
 
+    // Weather service Web API base URL
     var serviceURL = 'http://localhost:61394';
 
     $("#txtCountry").keypress(function (e) {
